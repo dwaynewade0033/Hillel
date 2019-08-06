@@ -60,11 +60,13 @@ public class Menu {
         switch (scanner.next()) {
             case "1": {
                 System.out.println("Введите VIN машины. Для возврата в предыдущее меню введите цифру 0. \n");
-                if(scanner.equals(-0)){
+                String s = scanner.next();
+                if(s.equals("0")){
                     secondMenu();
                     search(scanner);
                 }else {
-                    //System.out.println(scanner.toString());
+                    System.out.println("Машина с VIN " + s +" существует в базе. \n" +
+                            "Для поиска другой машины по Vin введите 1. Для возврата в предыдущее меню введите цифру 0.");
                 }
                 search(scanner);
                 break;
@@ -72,7 +74,7 @@ public class Menu {
             }
             case "2": {
                 System.out.println("Введите регистрационный номер машины. Для возврата в предыдущее меню введите цифру 0. \n");
-                if(scanner.equals("0")){
+                if(scanner.next().equals("0")){
                     secondMenu();
                     search(scanner);
                 }else {
