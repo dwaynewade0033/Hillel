@@ -48,4 +48,10 @@ public class Main {
         return newList;
     }
 
+   // -------------------------ВАРИАНТ 2-------------------------------------------------
+   //int maxYear = newList.stream().mapToInt(Car::getYearOfIssue).max().orElse(0);
+
+    //setOldList.stream().filter(c -> maxYear < c.getYearOfIssue()).collect(Collectors.toCollection(() -> newList));
+
+
 }
