@@ -36,7 +36,7 @@ public class Main {
     public static List<Car> merge(List<Car> oldList, Set<Car> setOldList) {
         ArrayList<Car> newList = new ArrayList<Car>();
         newList.addAll(oldList);
-        Collections.sort(newList, Car.COMPARE_BY_COUNT);
+        Collections.sort(newList, Car.COMPARE_BY_YEAR_OF_ISSUE);
         Car e = newList.get(newList.size() - 1);
         System.out.println(e.getYearOfIssue());
         for(Car car:setOldList){

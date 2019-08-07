@@ -23,7 +23,7 @@ public class Car {
                 "yearOfIssue=" + yearOfIssue +
                 '}';
     }
-    public static final Comparator<Car> COMPARE_BY_COUNT = new Comparator<Car>() {
+    public static final Comparator<Car> COMPARE_BY_YEAR_OF_ISSUE = new Comparator<Car>() {
         @Override
         public int compare(Car lhs, Car rhs) {
             return lhs.getYearOfIssue() - rhs.getYearOfIssue();
