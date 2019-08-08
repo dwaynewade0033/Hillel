@@ -87,15 +87,85 @@ public class Menu {
                 break;
             }
             case "3": {
+                System.out.println("Введите марку машины. Для возврата в предыдущее меню введите цифру 0. \n");
+                String o = scanner.next();
+                if(o.equals("0")){
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }
+                System.out.println("Введите модель машины. Для возврата в предыдущее меню введите цифру 0. \n");
+                String d = scanner.next();
+                if(d.equals("0")){
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }else {
+                    System.out.println("Машина марки " + o + "  и модели " + d + " существует в базе. \n" +
+                            "Для поиска другой марки машины введите 3. Для возврата в предыдущее меню введите цифру 0.");
+                }
+                search(scanner);
                 break;
             }
             case "4": {
+                System.out.println("Введите год выпуска от... до. Для возврата в предыдущее меню введите цифру 0. \n");
+                String o = scanner.next();
+                if(o.equals("0")){
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }
+                String d = scanner.next();
+                if(d.equals("0")){
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }else {
+                    System.out.println("Машина с годом выпуска от " + o + " до " + d + " существует в базе. \n" +
+                            "Для поиска другой машины с пробегом от....до введите 4. Для возврата в предыдущее меню введите цифру 0.");
+                }
+                search(scanner);
                 break;
             }
             case "5": {
+                    System.out.println("Введите пробег от... до (Минимальный пробег 1 км.). Для возврата в предыдущее меню введите цифру 0. \n");
+                String o = scanner.next();
+                if(o.equals("0")){
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }
+                String d = scanner.next();
+                if (d.equals("0")) {
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }else {
+                    System.out.println("Машина с пробегом от " + o + " до " + d + " существует в базе. \n" +
+                            "Для поиска другой машины с пробегом от....до введите 5. Для возврата в предыдущее меню введите цифру 0.");
+                }
+                search(scanner);
                 break;
             }
             case "6": {
+                System.out.println("Введите цену от... до. Для возврата в предыдущее меню введите цифру 0. \n");
+                String o = scanner.next();
+                if(o.equals("0")){
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }
+                String d = scanner.next();
+                if (d.equals("0")) {
+                    secondMenu();
+                    search(scanner);
+                    break;
+                }else {
+                    System.out.println("Машина с ценой от " + o +" до "+ d  +" существует в базе. \n" +
+                            "Для поиска другой с ценой от....до введите 6. Для возврата в предыдущее меню введите цифру 0.");
+                }
+                search(scanner);
+
                 break;
             }
             case "7": {
