@@ -1,6 +1,7 @@
 package Generics;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HelperTest {
     public static <T,V>Pair<T,V> getPair(){
@@ -10,11 +11,21 @@ public class HelperTest {
     public static <T> T getSecongValue(T firstValue, T secondValue){
         return secondValue;
     }
+    static <T> void copy(List<? extends T> src, List<? super T> dest){
+        dest.addAll(src);
+    }
     public static void main(String[] args) {
-        Class c1 = new ArrayList<String>().getClass();
-        Class c2 = new ArrayList<String>().getClass();
-        System.out.println(c1==c2);
-
+//        Class c1 = new ArrayList<String>().getClass();
+//        Class c2 = new ArrayList<String>().getClass();
+//        System.out.println(c1==c2);
+        List<Integer> src  = new ArrayList<>();
+        src.add(24);
+        src.add(30);
+        List<Number> dest = new ArrayList<>();
+        dest.add(12);
+        dest.add(41);
+        copy(src,dest);
+        System.out.println(dest);
 
         //  Comparable value = getSecongValue(10L, 2);
 
