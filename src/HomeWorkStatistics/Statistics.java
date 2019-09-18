@@ -52,7 +52,7 @@ public class Statistics {
             }
         }
         System.out.println("Самое неповторяющееся слово: " + maxWord + " (встречается " + maxCount + " раз)");
-        
+
 
     }
 
