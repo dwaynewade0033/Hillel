@@ -16,9 +16,15 @@ public class SwapGenerics {
 
     }
 
-    public static <T> void newValue(List<T> solarSystem, int first, int second){
-        Collections.swap(solarSystem, first, second);
-        System.out.println(solarSystem);
+    public static <T> void newValue(List<T> value, int first, int second){
+        Collections.swap(value, first, second);
+        System.out.println(value);
+
+    }
+
+    public static <T extends Number> void maxValue(List<T> value, int first, int second){
+        Collections.swap(value, first, second);
+        System.out.println(value);
 
     }
 }
