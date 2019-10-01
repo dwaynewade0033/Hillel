@@ -1,7 +1,7 @@
 package MyDB;
 
 public class Car {
-    private String vinCode;
+    private int vinCode;
     private String numberOfCar;
     private String mark;
     private String model;
@@ -9,7 +9,7 @@ public class Car {
     private int mileage;
     private int yearOfIssue;
 
-    public Car(String vinCode, String numberOfCar, String mark, String model, int price, int mileage, int yearOfIssue) {
+    public Car(int vinCode, String numberOfCar, String mark, String model, int price, int mileage, int yearOfIssue) {
         this.vinCode = vinCode;
         this.numberOfCar = numberOfCar;
         this.mark = mark;
@@ -19,11 +19,11 @@ public class Car {
         this.yearOfIssue = yearOfIssue;
     }
 
-    public String getVinCode() {
+    public int getVinCode() {
         return vinCode;
     }
 
-    public void setVinCode(String vinCode) {
+    public void setVinCode(int vinCode) {
         this.vinCode = vinCode;
     }
 

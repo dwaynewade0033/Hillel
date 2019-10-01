@@ -169,6 +169,8 @@ public class Menu {
                 break;
             }
             case "7": {
+                System.out.println("Список машин: ");
+
                 break;
             }
             case "0": {

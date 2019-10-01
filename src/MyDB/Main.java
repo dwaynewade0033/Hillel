@@ -7,7 +7,7 @@ import static MyDB.Menu.menu;
 
 public class Main {
     public static void main(String[] args) {
-        Menu menu = new Menu();
+        Car car = new Car(123,"123","dasd","",2,3,1);
         Scanner scanner = new Scanner(System.in);
         firstMenu();
         menu(scanner);
