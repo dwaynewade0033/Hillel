@@ -5,27 +5,34 @@ import java.util.Arrays;
 
 public class CheckFIO {
     public static void main(String[] args) {
-        check("Ssadf Denis Valerievich");
-
+        check("Shevchenko Denis Valerievich");
+        System.out.println(isFullname("Shevchenko Denis Valerievich"));
     }
 
     public static boolean check(String fio) {
-        ArrayList<String> reverseText = new ArrayList<>(Arrays.asList(fio.split(" ")));
-        System.out.println(reverseText);
-        String surname = reverseText.get(0);
-        String name = reverseText.get(1);
-        String patronymic = reverseText.get(2);
+        ArrayList<String> mainFIO = new ArrayList<>(Arrays.asList(fio.split(" ")));
+        System.out.println(mainFIO);
+
+        String surname = mainFIO.get(0);
+        String name = mainFIO.get(1);
+        String patronymic = mainFIO.get(2);
+
         int numberOfSurname = surname.length();
-        int numberOfName = surname.length();
-        int numberOfPatronymic = surname.length();
-        if(numberOfSurname>2 & numberOfSurname<14)
+        int numberOfName = name.length();
+        int numberOfPatronymic = patronymic.length();
+
+        if(numberOfSurname>2 & numberOfSurname<14 & numberOfName>2 & numberOfName < 8 & numberOfPatronymic >5 & numberOfPatronymic<16)
         {
             System.out.println("ok");
             return true;
         }else {
-            System.out.println("ds");
+            System.out.println("ne ok");
             return false;
         }
 
     }
-}
+    public static boolean isFullname(String str) {
+        String expression = "^[a-zA-Z\\s]*$";
+        return str.matches(expression);
+    }
+    }
