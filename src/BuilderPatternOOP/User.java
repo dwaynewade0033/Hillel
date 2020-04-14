@@ -8,6 +8,7 @@ public class User {
     private String phone;
     private String password;
     private String sex;
+    private String sexx;
 
     public String getFirstName() {
         return firstName;
