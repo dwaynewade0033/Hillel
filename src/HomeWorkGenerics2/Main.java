@@ -13,13 +13,13 @@ public class Main {
         finalList.add(3);
         finalList.add(4);
         finalList.add(5);
-        finalList.add(6);
+        finalList.add(32);
         finalwList.add(3);
         finalwList.add(4);
         finalwList.add(5);
-        finalwList.add(6);
+        finalwList.add(32);
         finalwList.add(123);
-        finalCol(finalList, finalwList);
+        columns(finalList, finalwList);
 
     }
 

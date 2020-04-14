@@ -13,7 +13,7 @@ public class Main {
         arrayList.add(3);
         arrayList.add(5);
         Counter counter = new Counter();
-        counter.setStrategy(new ReversSort());
+        counter.setStrategy(new SimpleSort());
         counter.quickSort(arrayList);
         System.out.println(counter);
     }
